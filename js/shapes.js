@@ -25,16 +25,17 @@ window.onload = function() {
  * Exercise 1.
  */
 
-const sayHello = function() {
-    // write your exercise 1 code here
-};
+ const sayHello = function () {
+   let text = prompt("Message: ");
+    
+ };
 
 /*
  * Exercise 2.
  */
 
 const drawRectangle = function() {
-    // write your exercise 2 code here
+
 };
 
 /*
@@ -42,7 +43,7 @@ const drawRectangle = function() {
  */
 
 const drawColoredRectangle = function() {
-    // write your exercise 3 code here
+
 };
 
 /*
@@ -50,7 +51,7 @@ const drawColoredRectangle = function() {
  */
 
 const drawTriangle = function() {
-    // write your exercise 4 code here
+
 };
 
 /*
@@ -58,7 +59,7 @@ const drawTriangle = function() {
  */
 
 const drawFace = function() {
-    // write your exercise 4 code here
+
 };
 
 /*
@@ -66,5 +67,5 @@ const drawFace = function() {
  */
 
 const drawPyramid = function() {
-    // write your exercise 5 code here
+
 };
