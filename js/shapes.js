@@ -20,7 +20,7 @@ window.onload = function() {
 
     document.getElementById("hello").onclick = sayHello;
 }
-
+//EXERCISE 1
 const sayHello = function() {
 let speak = prompt("Message: ");
 
@@ -34,22 +34,67 @@ let ctx = canvas.getContext("2d");
 ctx.font = "48px Sans-Serif";
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 ctx.strokeText(speak, 30, 70, 994);
-}; //1
+}; 
 
-
+//EXERCISE 2
 const drawRectangle = function() {
+const canvas = document.getElementById('student-canvas-2');
+const ctx = canvas.getContext('2d');
+ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-}; //2
+do {
+ var side = prompt("Width: ");
+ var tall = prompt("Height: ");
+ var x = prompt("X: ");
+ var y = prompt("Y: ");
+ var numbuh = 1024;   
+ var smolNumbuh = 512
+if (side > numbuh || side < 1) {
+ alert("Your width must be between 1 and 1024.")
+ }
+if (tall > smolNumbuh || tall < 1) {
+ alert("Your height must be between 1 and 512.")
+ }
+if (x < 1 || x > numbuh) {
+  alert("Your x-coordinate must be between 1 and 1024.")
+ }
+if (y < 1 || y > smolNumbuh) {
+  alert("Your y-coordinate must be between 1 and 512.")
+ }
+if (isNaN(side) || isNaN(tall) || isNaN(x) || isNaN(y)) {
+  alert("One of your values is not a number.")
+ }
+ } 
+ while (side > numbuh || side < 1 || tall > smolNumbuh || tall < 1 || x < 1 || x > numbuh || y < 1 || y > smolNumbuh || isNaN(side) || isNaN(tall) || isNaN(x) || isNaN(y))
 
-
-const drawColoredRectangle = function() {
-
+ ctx.rect(x, y, side, tall);
+ ctx.stroke();
 };
 
-/*
- * Exercise 4.
- */
+//EXERCISE 3
+const drawColoredRectangle = function() {
+const canvas = document.getElementById('student-canvas-3');
+const ctx = canvas.getContext('2d');
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+do {
+ var full = (prompt("Color: "))
+  if (fill == null) {
+  break;
+}
+full = String(full);
+var fullCase = full.toLowerCase()
+if (fullCase != "black" && fullCase != "blue" && fullCase != "green" && fullCase != "red" && fullCase != "orange" && fullCase != "purple" && fullCase != "yellow") {
+  alert(full + " is not a supported color.")
+}
+} 
+while (fullCase != "green" && fullCase != "black" && fullCase != "blue" && fullCase != "orange" && fullCase != "purple" && fullCase != "red" && fullCase != "yellow")
+ if (full != null) {
+   ctx.fillStyle = fullCase;
+   ctx.fillRect(10, 10, 100, 50);
+}
 
+//EXERCISE 4
 const drawTriangle = function() {
 
 };
