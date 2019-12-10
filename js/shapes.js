@@ -37,7 +37,9 @@ ctx.strokeText(speak, 30, 70, 994);
 }; 
 
 //EXERCISE 2
-
+const drawrectangle = function() {
+    
+}
 
 //EXERCISE 3
 const drawColoredRectangle = function() {
