@@ -38,6 +38,42 @@ ctx.strokeText(speak, 30, 70, 994);
 
 //EXERCISE 2
 const drawRectangle = function() {
+let width = prompt("Width: ");
+let height = prompt("Height: ");
+let x = prompt("X: ");
+let y = prompt("Y: ");
+
+
+};
+//EXERCISE 3
+const drawColoredRectangle = function() {
+
+};
+
+//EXERCISE 4
+const drawTriangle = function() {
+
+};
+
+/*
+ * Exercise 5.
+ */
+
+const drawFace = function() {
+
+};
+
+/*
+ * Exercise 6 (extra credit).
+ */
+
+const drawPyramid = function() {
+
+};
+
+
+//EXERCISE 2
+const drawRectangle = function() {
 
 };
 //EXERCISE 3
