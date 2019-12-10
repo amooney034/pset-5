@@ -88,22 +88,23 @@ const drawColoredRectangle = function() {
 let canvas = document.getElementById('student-canvas-3');
 let coloredRectangle = canvas.getContext('2d');
  coloredRectangle.clearRect(0, 0, canvas.width, canvas.height);
-  do {
-    var color = (prompt("Color: "))
-    if (color == null) {
-      break;
-    }
-    color = String(color)
-    var color_case = color.toLowerCase()
-    if (color_case != "green" && color_case != "black" && color_case != "blue" && color_case != "orange" && color_case != "purple" && color_case != "red" && color_case != "yellow") {
-      alert(color + " is not a supported color.")
-    }
-  } while (color_case != "green" && color_case != "black" && color_case != "blue" && color_case != "orange" && color_case != "purple" && color_case != "red" && color_case != "yellow")
-
-  if (color != null) {
-  coloredRectangle.fillStyle = color_case;
-    coloredRectangle.fillRect(10, 10, 100, 50);
-  }
+do { 
+ var color = (prompt("Color: "))
+ if (color == null) {
+break;
+}
+color = String(color)
+var colorChange = color.toLowerCase()
+if (colorChange != "green" && colorChange != "black" && colorChange != "blue" && colorChange != "orange" && colorChange != "purple" && colorChange != "red" && colorChange != "yellow") 
+{
+alert(color + " is not a supported color.")
+}
+} 
+while (colorChange != "green" && colorChange != "black" && colorChange != "blue" && colorChange != "orange" && colorChange != "purple" && colorChange != "red" && colorChange != "yellow")
+if (color != null) {
+coloredRectangle.fillStyle = colorChange;
+coloredRectangle.fillRect(10, 10, 100, 50);
+}
 };
 
 //EXERCISE 4
