@@ -22,9 +22,9 @@ window.onload = function() {
 }
 //EXERCISE 1
 const sayHello = function() {
-let speak = prompt("Message: ");
-let canvas = document.getElementById("student-canvas-1");
-let ctx = canvas.getContext("2d");
+var speak = prompt("Message: ");
+var canvas = document.getElementById("student-canvas-1");
+var ctx = canvas.getContext("2d");
 
 while (speak.length > 50) {
  window.alert("Your message is too long. Keep it under 50 characters.")
@@ -38,13 +38,13 @@ ctx.strokeText(speak, 30, 70, 994);
 
 //EXERCISE 2
 const drawRectangle = function() {
-let canvas = document.getElementById("student-canvas-2");
-let rectangle = canvas.getContext("2d");
+var canvas = document.getElementById("student-canvas-2");
+var rectangle = canvas.getContext("2d");
  rectangle.clearRect(0, 0, canvas.width, canvas.height);
-let width = prompt("Width: ");
-let height = prompt("Height: ");
-let x = prompt("X: ");
-let y = prompt("Y: ");
+var width = prompt("Width: ");
+var height = prompt("Height: ");
+var x = prompt("X: ");
+var y = prompt("Y: ");
     
 while (width > canvas.width || width < 1) {
 window.alert("Your width must be between 1 and 1024.")
@@ -85,8 +85,8 @@ context.stroke();
 
 //EXERCISE 3
 const drawColoredRectangle = function() {
-let canvas = document.getElementById('student-canvas-3');
-let coloredRectangle = canvas.getContext('2d');
+var canvas = document.getElementById('student-canvas-3');
+var coloredRectangle = canvas.getContext('2d');
  coloredRectangle.clearRect(0, 0, canvas.width, canvas.height);
 do { 
  var color = (prompt("Color: "))
@@ -128,34 +128,4 @@ const drawPyramid = function() {
 
 };
 
-
-//EXERCISE 2
-const drawRectangle = function() {
-
-};
-//EXERCISE 3
-const drawColoredRectangle = function() {
-
-};
-
-//EXERCISE 4
-const drawTriangle = function() {
-
-};
-
-/*
- * Exercise 5.
- */
-
-const drawFace = function() {
-
-};
-
-/*
- * Exercise 6 (extra credit).
- */
-
-const drawPyramid = function() {
-
-};
 
