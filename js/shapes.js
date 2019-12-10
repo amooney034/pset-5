@@ -37,39 +37,7 @@ ctx.strokeText(speak, 30, 70, 994);
 }; 
 
 //EXERCISE 2
-const drawRectangle = function() {
-const canvas = document.getElementById('student-canvas-2');
-const ctx = canvas.getContext('2d');
-ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-do {
- var side = prompt("Width: ");
- var tall = prompt("Height: ");
- var x = prompt("X: ");
- var y = prompt("Y: ");
- var numbuh = 1024;   
- var smolNumbuh = 512
-if (side > numbuh || side < 1) {
- alert("Your width must be between 1 and 1024.")
- }
-if (tall > smolNumbuh || tall < 1) {
- alert("Your height must be between 1 and 512.")
- }
-if (x < 1 || x > numbuh) {
-  alert("Your x-coordinate must be between 1 and 1024.")
- }
-if (y < 1 || y > smolNumbuh) {
-  alert("Your y-coordinate must be between 1 and 512.")
- }
-if (isNaN(side) || isNaN(tall) || isNaN(x) || isNaN(y)) {
-  alert("One of your values is not a number.")
- }
- } 
- while (side > numbuh || side < 1 || tall > smolNumbuh || tall < 1 || x < 1 || x > numbuh || y < 1 || y > smolNumbuh || isNaN(side) || isNaN(tall) || isNaN(x) || isNaN(y))
-
- ctx.rect(x, y, side, tall);
- ctx.stroke();
-};
 
 //EXERCISE 3
 const drawColoredRectangle = function() {
