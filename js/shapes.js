@@ -37,10 +37,9 @@ ctx.strokeText(speak, 30, 70, 994);
 };
 
 //EXERCISE 2
-const drawrectangle = function() {
+const drawRectangle = function() {
 
 };
-
 //EXERCISE 3
 const drawColoredRectangle = function() {
 
@@ -66,3 +65,4 @@ const drawFace = function() {
 const drawPyramid = function() {
 
 };
+
