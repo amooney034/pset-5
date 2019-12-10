@@ -23,13 +23,13 @@ window.onload = function() {
 //EXERCISE 1
 const sayHello = function() {
 let speak = prompt("Message: ");
+let canvas = document.getElementById("student-canvas-1");
+let ctx = canvas.getContext("2d");
 
 while (speak.length > 50) {
  window.alert("Your message is too long. Keep it under 50 characters.")
  speak = prompt("Message: ");
 }
-let canvas = document.getElementById("student-canvas-1");
-let ctx = canvas.getContext("2d");
 
 ctx.font = "48px Sans-Serif";
 ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -38,13 +38,51 @@ ctx.strokeText(speak, 30, 70, 994);
 
 //EXERCISE 2
 const drawRectangle = function() {
+let canvas = document.getElementById("student-canvas-2");
+let rectangle = canvas.getContext("2d");
+ rectangle.clearRect(0, 0, canvas.width, canvas.height);
 let width = prompt("Width: ");
 let height = prompt("Height: ");
 let x = prompt("X: ");
 let y = prompt("Y: ");
-
-
+    
+while (width > canvas.width || width < 1) {
+window.alert("Your width must be between 1 and 1024.")
+width = prompt("Width: ");
+height = prompt("Height: ");
+x = prompt("X: ");
+y = prompt("Y: ");
+}
+    
+while (height > canvas.height || height < 1 ) {
+window.alert("Your height must be between 1 and 512.")
+width = prompt("Width: ");
+height = prompt("Height: ");
+x = prompt("X: ");
+y = prompt("Y: ");
+}
+    
+while (x > 1024 || height < 1 ) {
+window.alert("Your x-coordinate must be between 1 and 1024.")
+width = prompt("Width: ");
+height = prompt("Height: ");
+x = prompt("X: ");
+y = prompt("Y: ");
+}
+    
+while (height > 512 || height < 1 ) {
+window.alert("Your y-coordinate must be between 1 and 512.")
+width = prompt("Width: ");
+height = prompt("Height: ");
+x = prompt("X: ");
+y = prompt("Y: ");
+}
+    
+context.rect(x, y, width, height);
+context.clearRect(0, 0, canvas.width, canvas.height);
+context.stroke();
 };
+
 //EXERCISE 3
 const drawColoredRectangle = function() {
 
