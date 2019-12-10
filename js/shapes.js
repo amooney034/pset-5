@@ -41,25 +41,7 @@ ctx.strokeText(speak, 30, 70, 994);
 
 //EXERCISE 3
 const drawColoredRectangle = function() {
-const canvas = document.getElementById('student-canvas-3');
-const ctx = canvas.getContext('2d');
-ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
-do {
- var full = (prompt("Color: "))
-  if (fill == null) {
-  break;
-}
-full = String(full);
-var fullCase = full.toLowerCase()
-if (fullCase != "black" && fullCase != "blue" && fullCase != "green" && fullCase != "red" && fullCase != "orange" && fullCase != "purple" && fullCase != "yellow") {
-  alert(full + " is not a supported color.")
-}
-} 
-while (fullCase != "green" && fullCase != "black" && fullCase != "blue" && fullCase != "orange" && fullCase != "purple" && fullCase != "red" && fullCase != "yellow")
- if (full != null) {
-   ctx.fillStyle = fullCase;
-   ctx.fillRect(10, 10, 100, 50);
+
 }
 
 //EXERCISE 4
@@ -81,4 +63,5 @@ const drawFace = function() {
 
 const drawPyramid = function() {
 
+};
 };
