@@ -5,7 +5,6 @@ window.onload = function() {
     document.getElementById("triangle-sample").onclick = drawTriangleStaff;
     document.getElementById("smile-sample").onclick = drawFaceStaff;
     document.getElementById("pyramid-sample").onclick = drawPyramidStaff;
-
     // this is how we're connecting our buttons to our JavaScript functions. let's walk through it.
     //
     // document.getElementById("some-id")   <-- you need to give each button a unique ID
