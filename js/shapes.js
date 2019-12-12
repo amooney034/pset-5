@@ -202,10 +202,10 @@ const drawPyramid = function() {
 const canvas = document.getElementById("student-canvas-6");
 const pyramid = canvas.getContext("2d");
 pyramid.clearRect(0, 0, canvas.width, canvas.height);
-var distance = 0;
-var height = 0;
-var adjustingDistance = 0;
-var adjustingHeight = 0;
+var dist = 0;
+var ht = 0;
+var adjustDist = 0;
+var adjustHt = 0;
 var check = 5;
 var side;
    
@@ -225,23 +225,23 @@ else if (isNaN(side)) {
 }
 } 
 while (isNaN(side) || side > 100 || side < 1)
-distance = Number(distance);
-height = Number(height);
+dist = Number(dist);
+ht = Number(ht);
 side = Number(side);
 for (x = 5; x > 0; x--) {
 check = x
 while(check >= 1) {
-ctx.beginPath();
-ctx.rect(10 + distance, (502 - side) - height, side,  side);
-ctx.stroke();
-ctx.closePath();
-distance = distance + side
+pyramid.beginPath();
+pyramid.rect(10 + dist, (502 - side) - ht, side,  side);
+pyramid.stroke();
+pyramid.closePath();
+dist = dist + side
 check--
 }
-adjustingDistance++
-distance = adjustingDistance * (1/2 * side)
-adjustingHeight++
-height = adjustingHeight * side
+adjustDist++
+dist = adjustDist * (1/2 * side)
+adjustHt++
+ht = adjustHt * side
 }
 };
 
