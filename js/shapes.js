@@ -197,9 +197,52 @@ face.closePath();
 /*
  * Exercise 6 (extra credit).
  */
-
 const drawPyramid = function() {
-
+const drawPyramid = function() {
+const canvas = document.getElementById("student-canvas-6");
+const pyramid = canvas.getContext("2d");
+pyramid.clearRect(0, 0, canvas.width, canvas.height);
+var distance = 0;
+var height = 0;
+var adjustingDistance = 0;
+var adjustingHeight = 0;
+var check = 5;
+var side;
+   
+do {
+var side = prompt("Side: ")
+if (side == null) {
+ break;
+}
+if (side < 1) {
+ alert("Your block size must be at least 1.")
+}
+else if (side > 100) {
+ alert("Your pyramid won't fit on the canvas")
+}
+else if (isNaN(side)) {
+ alert("Your block size is not a number.")
+}
+} 
+while (isNaN(side) || side > 100 || side < 1)
+distance = Number(distance);
+height = Number(height);
+side = Number(side);
+for (x = 5; x > 0; x--) {
+check = x
+while(check >= 1) {
+ctx.beginPath();
+ctx.rect(10 + distance, (502 - side) - height, side,  side);
+ctx.stroke();
+ctx.closePath();
+distance = distance + side
+check--
+}
+adjustingDistance++
+distance = adjustingDistance * (1/2 * side)
+adjustingHeight++
+height = adjustingHeight * side
+}
 };
 
 
