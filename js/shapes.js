@@ -163,37 +163,35 @@ var rad = (prompt("Radius: "))
 if (rad == null) {
  break;
 }
-  if (radius < 32) {
-    alert("Your radius must be at least 32.")
-  }
-  else if (isNaN(radius)) {
-    alert("Your radius is not a number.")
-  }
-  else if (radius > 256) {
-    alert("Your smiley face won't fit on the canvas.")
-  }
-} while (radius > 256 || isNaN(radius) || radius < 32)
-
-var eyesRadius = 0.15 * radius
-var mouthRadius = 0.7 * radius
-
-
-ctx.beginPath();
-ctx.arc(512, 256, radius, 0, 2 * Math.PI);
-ctx.stroke();
-ctx.closePath();
-ctx.beginPath();
-ctx.arc(512, 256, mouthRadius, 0, Math.PI);
-ctx.stroke();
-ctx.closePath();
-ctx.beginPath();
-ctx.arc(512 - 0.4 * radius, 256 - 0.4 * radius, eyesRadius, 0, 2 * Math.PI);
-ctx.stroke();
-ctx.closePath();
-ctx.beginPath();
-ctx.arc(512 + 0.4 * radius, 256 - 0.4* radius, eyesRadius, 0, 2 * Math.PI);
-ctx.stroke();
-ctx.closePath();
+if (rad < 32) {
+ alert("Your radius must be at least 32.")
+}
+else if (isNaN(rad)) {
+ alert("Your radius is not a number.")
+}
+ else if (rad > 256) {
+ alert("Your smiley face won't fit on the canvas.")
+}
+} 
+while (rad > 256 || isNaN(rad) || rad < 32)
+var eyes = 0.15 * rad
+var mouth = 0.7 * rad
+face.beginPath();
+ctx.arc(512, 256, rad, 0, 2 * Math.PI);
+face.stroke();
+face.closePath();
+face.beginPath();
+face.arc(512, 256, mouth, 0, Math.PI);
+face.stroke();
+face.closePath();
+face.beginPath();
+face.arc(512 - 0.4 * rad, 256 - 0.4 * rad, eyes, 0, 2 * Math.PI);
+face.stroke();
+face.closePath();
+face.beginPath();
+face.arc(512 + 0.4 * rad, 256 - 0.4* rad, eyes, 0, 2 * Math.PI);
+face.stroke();
+face.closePath();
 };
 
 /*
