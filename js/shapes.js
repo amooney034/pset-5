@@ -109,7 +109,47 @@ coloredRectangle.fillRect(10, 10, 100, 50);
 
 //EXERCISE 4
 const drawTriangle = function() {
+const canvas = document.getElementById("student-canvas-4");
+const triangle = canvas.getContext("2d");
+triangle.clearRect(0, 0, canvas.width, canvas.height);
+    
+do {
+var uno = prompt("Side 1: ")
+var dos = prompt("Side 2: ")
+var tres = prompt("Side 3: ")
+if (uno == null || dos == null || tres == null) {
+ break;
+}
+    
+var hypo = Math.max(uno, dos, tres)
+var ht = Math.min (uno, dos, tres)
+var base = Math.sqrt(hypo * hypo - ht*ht)
+uno = Number(uno)
+dos = Number(dos)
+tres = Number(tres)
 
+if (base*base + ht*ht != hypo*hypo || base == 0 || ht == 0 || hypo == 0  || uno+dos+tres-hypo-ht != base) {
+  alert("That's not a valid right triangle.")
+}
+else if (isNaN(uno) || isNaN(dos) || isNaN(tres)) {
+ alert("One of your sides is not a number.")
+}
+else if (base > 1024 || ht > 512 || hypo > 1310720) {
+ alert("Your triangle won't fit on the canvas.")
+}
+}  
+while ((Math.floor(base)*Math.floor(base) + ht*ht != hypo*hypo) || isNaN(uno) || isNaN(dos) || isNaN(tres) || base > 1024 || ht > 512 || hypo > 1310720 || base == 0 || ht == 0 || hypo == 0)
+
+if ((base*base + ht*ht == hypo*hypo) && (base < 1024 && ht < 512 && hypo < 1145) && (base != 0 && ht != 0 && hypo != 0) && (base != null && ht != null && hypo != null)) {
+ ht = ht + 25
+ base = base + 25
+ triangle.beginPath();
+ triangle.moveTo(25, 25);
+ triangle.lineTo(25, ht);
+ triangle.lineTo(base, ht)
+ triangle.lineTo(25, 25)
+ triangle.stroke();
+}
 };
 
 /*
