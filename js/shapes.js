@@ -43,7 +43,7 @@ var width = prompt("Width: ");
 var height = prompt("Height: ");
 var x = prompt("X: ");
 var y = prompt("Y: ");
-    
+
 while (width > canvas.width || width < 1) {
 window.alert("Your width must be between 1 and 1024.")
 width = prompt("Width: ");
