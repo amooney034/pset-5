@@ -43,16 +43,25 @@ ctx.strokeText(speak, 30, 70, 994);
 
 //EXERCISE 2
 const drawRectangle = function() {
-let speak = prompt("Message: ");
 
-while (speak.length > 50) {
- window.alert("Your message is too long. Keep it under 50 characters.")
- speak = prompt("Message: ");
-}
-let canvas = document.getElementById("student-canvas-2");
-let ctx = canvas.getContext("2d");
+};
 
-ctx.font = "48px Sans-Serif";
-ctx.clearRect(0, 0, canvas.width, canvas.height);
-ctx.strokeText(speak, 30, 70, 994);
+//EXERCISE 3
+const drawColoredRectangle = function() {
+    
+};
+
+//EXERCISE 4
+const drawTriangle = function() {
+    
+};
+
+//EXERCISE 5
+const drawColoredRectangle = function() {
+    
+};
+
+//EXERCISE 6
+const drawColoredRectangle = function() {
+    
 };
