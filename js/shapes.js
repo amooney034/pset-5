@@ -113,19 +113,50 @@ if (style != null) {
 };
 
 //EXERCISE Four
-const fra = function() {
-let speak = prompt("Message: ");
+const drawTriangle = function() {
+const canvas = document.getElementById("student-canvas-4");
+const ctx = canvas.getContext("2d");
+ ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-while (speak.length > 50) {
- window.alert("Your message is too long. Keep it under 50 characters.")
- speak = prompt("Message: ");
+do {
+    var sideOne = prompt("Side 1: ")
+    var sideTwo = prompt("Side 2: ")
+    var sideThree = prompt("Side 3: ")
+      
+    var hypo = Math.max(sideOne, sideTwo, sideThree)
+    var height = Math.min (sideOne, sideTwo, sideThree)
+    var base = Math.sqrt(hypo*hypo - height*height)
+
+    if (base == 0 && height == 0 && hypo == 0) {
+       break;
 }
-let canvas = document.getElementById("student-canvas-4");
-let ctx = canvas.getContext("2d");
+      
+sideOne = Number(sideOne)
+sideTwo = Number(sideTwo)
+    sideThree = Number(sideThree)
 
-ctx.font = "48px Sans-Serif";
-ctx.clearRect(0, 0, canvas.width, canvas.height);
-ctx.strokeText(speak, 30, 70, 994);
+    if (base*base + height*height != hypo*hypo || base == 0 || height == 0 || hypo == 0  || sideOne+sideTwo+sideThree-hypo-height != base) {
+      alert("That's not a valid right triangle.")
+}
+    else if (isNaN(sideOne) || isNaN(sideTwo) || isNaN(sideThree)) {
+      alert("One of your sides is not a number.")
+}
+    else if (base > 1024 || height > 512 || hypo > 1310720) {
+      alert("Your triangle won't fit on the canvas.")
+}
+}   while ((Math.floor(base)*Math.floor(base) + height*height != hypo*hypo) || isNaN(sideOne) || isNaN(sideTwo) || isNaN(sideThree) || base > 1024 || height > 512 || hypo > 1310720 || base == 0 || height == 0 || hypo == 0)
+
+if ((base*base + height*height == hypo*hypo) && (base < 1024 && height < 512 && hypo < 1145) && (base != 0 && height != 0 && hypo != 0) && (base != null && height != null && hypo != null)) {
+    height = height + 25
+    base = base + 25
+    ctx.beginPath();
+    ctx.moveTo(25, 25);
+    ctx.lineTo(25, height);
+    ctx.lineTo(base, height)
+    ctx.lineTo(25, 25)
+    ctx.stroke();
+}
 };
+
 
 
