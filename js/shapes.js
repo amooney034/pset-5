@@ -158,5 +158,94 @@ if ((base*base + height*height == hypo*hypo) && (base < 1024 && height < 512 && 
 }
 };
 
+//EXERCISE 5
+const drawFace = function() {
+const canvas = document.getElementById("student-canvas-5");
+const ctx = canvas.getContext("2d");
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+do {
+  var rad = (prompt("Radius: "))
+  if (rad == null) {
+    break;
+}
+  if (rad < 32) {
+    alert("Your radius must be at least 32.")
+}
+  else if (isNaN(rad)) {
+    alert("Your radius is not a number.")
+}
+  else if (rad > 256) {
+    alert("Your smiley face won't fit on the canvas.")
+}
+} while (rad > 256 || isNaN(rad) || rad < 32)
+
+var eyesRad = 0.15 * rad
+var mouthRad = 0.7 * rad
+
+ctx.beginPath();
+ctx.arc(512, 256, rad, 0, 2 * Math.PI);
+ctx.stroke();
+ctx.closePath();
+ctx.beginPath();
+ctx.arc(512, 256, mouthRad, 0, Math.PI);
+ctx.stroke();
+ctx.closePath();
+ctx.beginPath();
+ctx.arc(512 - 0.4 * rad, 256 - 0.4 * rad, eyesRad, 0, 2 * Math.PI);
+ctx.stroke();
+ctx.closePath();
+ctx.beginPath();
+ctx.arc(512 + 0.4 * rad, 256 - 0.4* rad, eyesRad, 0, 2 * Math.PI);
+ctx.stroke();
+ctx.closePath();
+};
+
+//EXERCISE 6
+const drawPyramid = function() {
+const canvas = document.getElementById("student-canvas-6");
+const ctx = canvas.getContext("2d");
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+var dist = 0;
+var height = 0;
+var adjustingDist = 0;
+var adjustingHt = 0;
+var check = 5;
+var side;
+
+do {
+      var side = prompt("Side: ")
+      if (side == null) {
+        break;
+}
+if (side < 1) {
+       alert("Your block size must be at least 1.")
+}
+else if (side > 100) {
+       alert("Your pyramid won't fit on the canvas")
+}
+else if (isNaN(side)) {
+       alert("Your block size is not a number.")
+}
+} while (isNaN(side) || side > 100 || side < 1)
+    dist = Number(dist);
+    height = Number(height);
+    side = Number(side);
+for (x = 5; x > 0; x--) {
+    check = x
+while(check >= 1) {
+     ctx.beginPath();
+     ctx.rect(10 + dist, (502 - side) - height, side,  side);
+     ctx.stroke();
+     ctx.closePath();
+     dist = dist + side
+     check--
+}
+adjustingDist++
+dist = adjustingDist * (1/2 * side)
+adjustingHt++
+height = adjustingHt * side
+    }
+};
 
 
