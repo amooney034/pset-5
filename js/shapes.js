@@ -94,18 +94,18 @@ const ctx = canvas.getContext("2d");
  ctx.clearRect(0, 0, canvas.width, canvas.height);
     
 do {
-   var style = (prompt("Color: "))
-   if (style == null) {
+   var color = (prompt("Color: "))
+   if (color == null) {
       break;
 }
-   style = String(style)
-   var color_case = style.toLowerCase()
+   color = String(color)
+   var color_case = color.toLowerCase()
    if (color_case != "green" && color_case != "black" && color_case != "blue" && color_case != "orange" && color_case != "purple" && color_case != "red" && color_case != "yellow") {
-      alert(style + " is not a supported color.")
+      alert(color + " is not a supported color.")
 }
 } while (color_case != "green" && color_case != "black" && color_case != "blue" && color_case != "orange" && color_case != "purple" && color_case != "red" && color_case != "yellow")
 
-  if (style != null) {
+  if (color != null) {
     ctx.fillStyle = color_case;
     ctx.fillRect(10, 10, 100, 50);
 }
