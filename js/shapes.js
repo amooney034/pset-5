@@ -133,9 +133,9 @@ do {
       
 sideOne = Number(sideOne)
 sideTwo = Number(sideTwo)
-    sideThree = Number(sideThree)
+sideThree = Number(sideThree)
 
-    if (base*base + height*height != hypo*hypo || base == 0 || height == 0 || hypo == 0  || sideOne+sideTwo+sideThree-hypo-height != base) {
+if (base*base + height*height != hypo*hypo || base == 0 || height == 0 || hypo == 0  || sideOne+sideTwo+sideThree-hypo-height != base) {
       alert("That's not a valid right triangle.")
 }
     else if (isNaN(sideOne) || isNaN(sideTwo) || isNaN(sideThree)) {
