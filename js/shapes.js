@@ -43,7 +43,41 @@ ctx.strokeText(speak, 30, 70, 994);
 
 //EXERCISE 2
 const drawRectangle = function() {
+const canvas = document.getElementById('student-canvas-2');
+const ctx = canvas2.getContext('2d');
+  ctx.clearRect(0, 0, 1024, 128);
+let width;
+let height;
+let x;
+let y;
 
+do {
+  width = prompt("Width: ");
+  height = prompt("Height: ");
+  x = prompt("X: ");
+  y = prompt("Y: ");
+
+    if (width == null || height == null || x == null || y == null) {
+      ctx.clearRect(0, 0, 1024, 128);
+      break;
+  }
+    if (width > 1024 || width < 1) {
+    alert("Your width must be between 1 and 1024.")
+} else if (height > 512 || height < 1) {
+    alert("Your height must be between 1 and 512.")
+} else if (x < 1 || x > 1024) {
+    alert("Your x-coordinate must be between 1 and 1024.")
+} else if (y < 1 || y > 512) {
+    alert("Your y-coordinate must be between 1 and 512.")
+} else if (isNaN(width) || isNaN(height) || isNaN(x) || isNaN(y)) {
+    alert("One of your values is not a number.")
+} else if (Number(width) + Number(x) > 1024 || Number(height) + Number(y) > 512) {
+    alert("Your rectangle won't fit on the canvas.")
+}
+} while (width > 1024 || width < 1 || height > 512 || height < 1 || x < 1 || x > 1024 || y < 1 || y > 512 || isNaN(width) || isNaN(height) || isNaN(x) || isNaN(y) || Number(width) + Number(x) > 1024 || Number(height) + Number(y) > 512)
+
+ctx.clearRect(0, 0, 1024, 512);
+ctx.strokeRect(x, y, width, height);
 };
 
 //EXERCISE 3
@@ -57,11 +91,11 @@ const drawTriangle = function() {
 };
 
 //EXERCISE 5
-const drawColoredRectangle = function() {
+const drawFace = function() {
     
 };
 
 //EXERCISE 6
-const drawColoredRectangle = function() {
+const drawPyramid = function() {
     
 };
