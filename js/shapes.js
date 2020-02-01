@@ -89,25 +89,23 @@ do {
 
 //EXERCISE 3
 const drawColoredRectangle = function() {
-  const canvas = document.getElementById("student-canvas-3");
-  const ctx = canvas.getContext("2d");
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  do {
-    var color = (prompt("Color: "))
-    if (color == null) {
-      break;
-    }
-    color = String(color)
-    var color_case = color.toLowerCase()
-    if (color_case != "green" && color_case != "black" && color_case != "blue" && color_case != "orange" && color_case != "purple" && color_case != "red" && color_case != "yellow") {
-      alert(color + " is not a supported color.")
-    }
-  } while (color_case != "green" && color_case != "black" && color_case != "blue" && color_case != "orange" && color_case != "purple" && color_case != "red" && color_case != "yellow")
+ let canvas = document.getElementById('student-canvas-3');
+  let ctx = canvas.getContext('2d');
 
-  if (color != null) {
-    ctx.fillStyle = color_case;
-    ctx.fillRect(10, 10, 100, 50);
+  ctx.clearRect(0, 0, 1024, 512);
+
+  let color = prompt("Color: ")
+      color = color.toLowerCase();
+
+  if (color === null){
+    ctx.clearRect(0, 0, 1024, 512);
+  } else if (color !== "blue" && color !== "black" && color !== "green" && color !== "orange" && color !== "purple" && color !== "red" && color !== "yellow" ) {
+    alert(color + " is not a supported color.")
+    color = (prompt("Color: ")).toLowerCase();
   }
+
+    ctx.fillStyle = color;
+    ctx.fillRect(10, 10, 100, 50);
 
 };
 
