@@ -44,7 +44,7 @@ ctx.strokeText(speak, 30, 70, 994);
 //EXERCISE 2
 const drawRectangle = function() {
 const canvas = document.getElementById('student-canvas-2');
-const ctx = canvas2.getContext('2d');
+const ctx = canvas.getContext('2d');
   ctx.clearRect(0, 0, 1024, 128);
 let width;
 let height;
